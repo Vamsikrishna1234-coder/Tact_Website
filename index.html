@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tact Advertising</title>
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding-top: 30px;
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-weight: 700;
+
+    }
+    .navbar-nav .nav-link {
+      transition: all 0.3s ease;
+      border-radius: 8px; 
+      padding: 8px 16px;  
+    }
+
+    .navbar-nav .nav-link:hover {
+       background-color: #f05e09eb; 
+       color: white !important;
+       font-weight: bold;
+    }
+
+    .container .navbar-brand img {
+      float: right;
+    }
+
+    .main {
+      background: url('background image.webp') center/cover no-repeat;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+
+    .main::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(10, 9, 9, 0.894); 
+      z-index: 1;
+    }
+
+    .main .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .creative-text {
+      font-size: 3rem;
+      font-weight: 600;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #757171c9;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: 'Poppins', sans-serif;
+
+      
+    }
+    #cont p{
+         font-size: 8px;
+    }
+
+    .main h1 strong {
+      font-size: 4.2rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-top: -20px;
+    }
+
+    .main p {
+      font-size: 1.1rem;
+      color: #eaeaea;
+      margin-top: 10px;
+    }
+
+    .orange {
+      color: #e95500;
+    }
+    .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    }
+
+   .service-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+   }
+
+   .service-card .fa-2x {
+     transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+   .service-card:hover .fa-2x {
+    transform: scale(1.15);
+    color: #e95500;
+  }
+
+  .service-card:hover h5 {
+    color: #e95500 !important;
+  }
+
+    
+    .why-tact{
+      display: flex;
+      gap: 150px;
+      padding-left:30px;
+      
+    }
+    .why-tact h2{
+      padding-top: 75px;
+      font-weight: bold;
+  
+    }
+    .why-tact p{
+      text-align: left;
+      font-size: 10px;
+      justify-content: center;
+      padding-left: 50px;
+      
+    }
+    #tact {
+        font-size: 26px;
+    }
+    #tact span{
+        color: #e95500;
+        font-size: 40px;
+    }
+
+    .services-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .cta-section {
+      background: linear-gradient(to right, #545355b1, #7c7b7add);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .footer {
+      background: #111;
+      color: #ccc;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #e95500;
+      text-decoration: none;
+    }
+    .carousel-indicators [data-bs-target] {
+      width: 12px;
+       height: 12px;
+       border-radius: 50%;
+       background-color: #e95500;
+       margin: 0 5px;
+       opacity: 0.5;
+    }
+
+    .carousel-indicators .active {
+      opacity: 1;
+    }
+
+
+    .clients img {
+      max-height: 80px;
+      margin: 10px;
+    }
+    .btn-orange {
+      background-color: #e95500;
+      color: #e4e2e2;
+      font-weight: 400;
+      border: none;
+    }
+    .btn-orange:hover {
+      background-color: #cf4900;
+      color: #dedbdb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-uppercase text-dark" href="#Home">
+          <img src="Tact logo.png" height="70px" width="110px" alt="logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-2"><a class="nav-link" href="#Home">Home</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#About">About Us</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#works">Works</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#clients">Real Estate</a></li>
+            <li class="nav-item mx-2"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <span class="ms-3 text-orange fw-bold" style="color: #cf4900;">+91 7731 88 44 77</span>
+        </div>
+      </div>
+    </nav>
+
+
+  <!-- Main Section-->
+  <section class="main" id="Home">
+    <div class="container" id="cont">
+      <h1 class="creative-text">Creative</h1>
+      <h1><strong>Solutions</strong></h1>
+      <p>Every message delivered with purpose, every brand elevated with TACT</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-5" id="About">
+    <div class="container">
+      <div class="row align-items-center"><br>
+        <h2 class="fw-bold">Tact Advertising <br>
+          brings specialised knowledge</h2>
+        <div class="col-md-6">
+          <img src="about.jpg" class="img-fluid rounded" alt="errorimg" height="550px" width="600px">
+        </div>
+        <div class="col-md-6">
+          <a href="#"
+            class="text-orange" style="color: #fc6d00;">Since from 2017</a>
+        <div>      
+        <h4 style="font-weight: bolder;">We bring trusted solutions<br>
+             for your business.</h4> 
+        <p>We see our clients as strategic partners.<br>
+           This means in close cooperation, we are there for a wide range of<br>
+           marketing tasks, and we implement our ideas. </p>
+        <p>Everything from a single source. We are not satisfied with<br>
+           'run-of-the-mill', we challenge ourselves.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Why Tact Section-->
+<section style="background-color: #0f0f0fe6;" class="text-white py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Side: Heading -->
+      <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+        <h2 class="text-orange fw-bold" id="tact">Why<br><span style="font-size: 40px;">TACT?</span></h2>
+      </div>
+
+      <!-- Right Side: Paragraph -->
+      <div class="col-md-8">
+        <p class="lead text-light">
+          Tact Advertising is a full-service creative agency built on the belief<br>
+           that the best ideas don’t have to shout—they just have to land right. <br>
+          We specialize in compelling narratives, bold visuals, and<br>
+          strategic campaigns that speak to your audience with clarity, creativity,<br>
+          and, most importantly, tact.<br><br>
+          Whether you're launching a brand, reimagining your image,<br>
+          or scaling your impact, we help you connect the dots between<br>
+          vision and execution—with precision and purpose.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Services Section -->
+<section class="py-5" id="services">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-2">Our Services</h2>
+    <div class="mx-auto mb-4" style="width: 60px; height: 2px; background-color: #e95500;"></div>
+
+    <div class="row g-4">
+
+      <!-- Branding -->
+      <div class="col-md-4 col-sm-6">
+        <a href="#branding" class="service-card">
+          <div class="p-4 text-white rounded h-100" style="background-color: #e95500;">
+            <div class="mb-3">
+              <i class="fas fa-star fa-2x"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase" style="color: #fff;">Branding</h5>
+            <p class="small mb-0">
+              Summary Aliquam vel felis elit. <br>
+              Phasellus vitae laoreet mauris. <br>
+              Nullam at cursus odio. <br>
+              Suspendisse semper magna ve...
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Brochures -->
+      <div class="col-md-4 col-sm-6">
+        <a href="#brochures" class="service-card">
+          <div class="p-4 bg-light rounded h-100">
+            <div class="mb-3">
+              <i class="fas fa-file-alt fa-2x text-orange"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase text-orange" style="color: #e95500;">Brochures</h5>
+            <p class="small mb-0">
+              Summary Aliquam vel felis elit. <br>
+              Phasellus vitae laoreet mauris. <br>
+              Nullam at cursus odio. <br>
+              Suspendisse semper magna ve...
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Websites -->
+      <div class="col-md-4 col-sm-6">
+        <a href="#websites" class="service-card">
+          <div class="p-4 bg-light rounded h-100">
+            <div class="mb-3">
+              <i class="fas fa-globe fa-2x text-orange"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase text-orange" style="color: #e95500;">Websites</h5>
+            <p class="small mb-0">
+              Summary Aliquam vel felis elit. <br>
+              Phasellus vitae laoreet mauris. <br>
+              Nullam at cursus odio. <br>
+              Suspendisse semper magna ve...
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 3D Walkthroughs -->
+      <div class="col-md-4 col-sm-6">
+        <a href="#walkthroughs" class="service-card">
+          <div class="p-4 bg-light rounded h-100">
+            <div class="mb-3">
+              <i class="fas fa-play-circle fa-2x text-orange"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase text-orange" style="color: #e95500;">3D Walkthroughs</h5>
+            <p class="small mb-0">
+              Summary Aliquam vel felis elit. <br>
+              Phasellus vitae laoreet mauris.<br>
+              Nullam at cursus odio. <br>
+              Suspendisse semper magna ve...
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 col-sm-6">
+        <a href="#social" class="service-card">
+          <div class="p-4 bg-light rounded h-100">
+            <div class="mb-3">
+              <i class="fas fa-user-circle fa-2x text-orange"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase text-orange" style="color: #e95500;">Social Media</h5>
+            <p class="small mb-0">
+              Summary Aliquam vel felis elit. <br>
+              Phasellus vitae laoreet mauris.<br>
+              Nullam at cursus odio. <br>
+              Suspendisse semper magna ve...
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="col-md-4 col-sm-6">
+        <a href="#digital" class="service-card">
+          <div class="p-4 bg-light-subtle rounded h-100">
+            <div class="mb-3">
+              <i class="fas fa-bullhorn fa-2x text-orange"></i>
+            </div>
+            <h5 class="fw-bold text-uppercase text-orange" style="color: #e95500;">Digital Marketing</h5>
+            <p class="small mb-0">
+              Summary Aliquam vel felis elit. <br>
+              Phasellus vitae laoreet mauris.<br>
+              Nullam at cursus odio. <br>
+              Suspendisse semper magna ve...
+            </p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  
+  <!-- Projects Section -->
+<section class="py-5" id="works" style="background-color: #f0f0f0;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-2">Our Projects</h2>
+    <div class="mx-auto mb-4" style="width: 50px; height: 3px; background-color: #e95500;"></div>
+
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="project3.jpg" class="img-fluid rounded" alt="Project 1">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="project3.jpg" class="img-fluid rounded" alt="Project 2">
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <img src="project3.jpg" class="img-fluid rounded" alt="Project 3">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Client Section -->
+<section class="py-5 bg-light" id="clients">
+  <div class="container text-center">
+    <h2 class="fw-bold">Our Trusted Clients</h2>
+    <div class="text-orange mb-4" style="height: 3px; width: 60px; background: #e95500; margin: 0 auto 20px;"></div>
+    <h3 class="fw-semibold mb-5">We’ve worked <br>
+      with amazing brands</h3>
+
+    <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <div class="p-3 border rounded bg-white">
+              <img src="client1.webp" class="img-fluid" style="height: 60px;" alt="Harivillu">
+            </div>
+            <div class="p-3 border rounded bg-white">
+              <img src="client2.png" class="img-fluid" style="height: 60px;" alt="Bhuvana">
+            </div>
+            <div class="p-3 border rounded bg-white">
+              <img src="client3.jpeg" class="img-fluid" style="height: 60px;" alt="Ankura">
+            </div>
+            <div class="p-3 border rounded bg-white">
+              <img src="client4.jpg" class="img-fluid" style="height: 60px;" alt="AMR">
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 (duplicate or add more logos) -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <div class="p-3 border rounded bg-white">
+              <img src="client5.png" class="img-fluid" style="height: 60px;" alt="Client5">
+            </div>
+            <div class="p-3 border rounded bg-white">
+              <img src="client6.jpg" class="img-fluid" style="height: 60px;" alt="Client6">
+            </div>
+            <div class="p-3 border rounded bg-white">
+              <img src="client7.jpg" class="img-fluid" style="height: 60px;" alt="Client7">
+            </div>
+            <div class="p-3 border rounded bg-white">
+              <img src="client8.webp" class="img-fluid" style="height: 60px;" alt="Client8">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      </button>
+
+    <!-- Dots BELOW the logos -->
+    <div class="carousel-indicators mt-4 position-static">
+      <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="1"></button>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+
+  <!-- CTA Section -->
+<section class="cta-section text-white text-center py-5" style="background: #6e6c6cd0;">
+  <div class="container">
+    <h4 class="fw-bold">Let’s devise a plan and make a real impact.</h4>
+    <h3 class="display-5 fw-bold">LET’S MAKE IT BIG!</h3>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section text-dark text-center text-md-start pt-5 pb-3">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Logo & Address -->
+      <div class="col-md-4 mb-4 mb-md-0 text-center">
+        <img src="Tact logo.png" alt="Tact Logo" class="img-fluid" style="max-height: 80px;">
+        <p class="mt-3 mb-0">Beside City Union Bank, Kalyan’s Anshita Pride,<br>
+          Manikonda, Hyderabad, Telangana State - 500 089.
+        </p>
+      </div>
+
+      <!-- Back to Home Button -->
+      <div class="col-md-4 mb-4 mb-md-0 text-center d-flex flex-column align-items-center">
+        <a href="#Home" class="btn btn-orange px-4 py-2 rounded-pill">Back to Home Page</a>
+      </div>
+
+      <!-- Contact Info & Social Links -->
+      <div class="col-md-4 text-center text-md-start" id="contact">
+        <h6 class="fw-bold">Contact info</h6>
+        <p class="mb-0">info.tactadvertising@gmail.com<br>
+          mkt.tactadvertising@gmail.com
+        </p>
+        <p class="fw-bold mt-1">+91 7731 88 44 77, 8991 63630</p>
+
+        <!-- Social Media -->
+        <h6 class="fw-bold mt-3">Follow Us</h6>
+        <div class="d-flex justify-content-center justify-content-md-start">
+          <a href="https://www.facebook.com/tactadvertise/" target="_blank" class="me-3 text-dark">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/p/DKRaXeXPvlu/" target="_blank" class="me-3 text-dark">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/tact-advertising" target="_blank" class="text-dark">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-white text-center py-3 mt-4" style="background-color: #e95500;">
+    Copyright 2025. Tact Advertising. All rights reserved.
+  </div>
+</footer>
+
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var navLinks = document.querySelectorAll(".navbar-collapse .nav-link");
+    var navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navLinks.forEach(function(link) {
+      link.addEventListener("click", function () {
+        // Collapse only if navbar is shown (visible)
+        if (navbarCollapse.classList.contains("show")) {
+          new bootstrap.Collapse(navbarCollapse).toggle();
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
